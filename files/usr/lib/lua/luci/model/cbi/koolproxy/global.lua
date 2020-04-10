@@ -26,12 +26,12 @@ local i=luci.sys.exec("cat /usr/share/koolproxy/dnsmasq.adblock | wc -l")
 
 
 if luci.sys.call("pidof koolproxy >/dev/null") == 0 then
-	status = translate("<strong><font color=\"green\">koolproxyR plus+  运行中</font></strong>")
+	status = translate("<strong><font color=\"green\">KoolproxyR plus+  运行中</font></strong>")
 else
-	status = translate("<strong><font color=\"red\">koolproxyR plus+  已停止</font></strong>")
+	status = translate("<strong><font color=\"red\">KoolproxyR plus+  已停止</font></strong>")
 end
 
-o = Map("koolproxy", "<font color='green'>" .. translate("广告过滤大师 plus+ ") .."</font>",     "<font color='purple'>" .. translate( "广告过滤大师 plus+是能识别adblock规则的广告屏蔽软件，可以过滤网页广告、视频广告、HTTPS广告") .."</font>")
+o = Map("koolproxy", "<font color='green'>" .. translate("KoolproxyR plus+ ") .."</font>",     "<font color='purple'>" .. translate( "KoolproxyR plus+是能识别adblock规则的广告屏蔽软件，可以过滤网页广告、视频广告、HTTPS广告") .."</font>")
 
 t = o:section(TypedSection, "global")
 t.anonymous = true
